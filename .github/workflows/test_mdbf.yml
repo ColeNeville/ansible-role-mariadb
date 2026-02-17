@@ -30,7 +30,7 @@ jobs:
           - debian-12
           - debian-13
           - debian-sid
-          - fedora-41
+          - fedora-43
           - almalinux-9
           - rockylinux-9
         mariadb-version:
@@ -38,8 +38,8 @@ jobs:
           - "10.11"
           - "11.4"
           - "11.8"
-          - "12.1"
           - "12.2"
+          - "12.3"
         exclude:
           - distro: debian-13
             mariadb-version: 10.6
@@ -51,11 +51,11 @@ jobs:
             mariadb-version: 10.6
           - distro: debian-12
             mariadb-version: 10.6
-          - distro: fedora-41
+          - distro: fedora-43
             mariadb-version: 10.6
-          - distro: fedora-41
+          - distro: fedora-43
             mariadb-version: 10.11
-          - distro: fedora-41
+          - distro: fedora-43
             mariadb-version: 11.4
 
     steps:
