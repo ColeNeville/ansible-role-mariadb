@@ -41,7 +41,7 @@
         dest: /etc/apt/sources.list.d/mariadb.list
         content: |
           # Ansible managed
-          deb [signed-by=/etc/apt/keyrings/mariadb-keyring.pgp] {{ mariadb_use_official_repo_url }}/{{ mariadb_use_official_repo_version }}/{{ ansible_facts.distribution | lower() }} {{ repo_distribution_release }} main
+          deb [signed-by=/etc/apt/keyrings/mariadb-keyring.pgp] {{ mariadb_use_official_repo_url }}/repo/{{ mariadb_use_official_repo_version }}/{{ ansible_facts.distribution | lower() }} {{ repo_distribution_release }} main
         owner: root
         group: root
         mode: "0644"
