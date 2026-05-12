@@ -25,6 +25,7 @@ jobs:
       matrix:
         distro:
           - almalinux-9
+          - almalinux-10
           - alpine-3.20
           - alpine-3.21
           - alpine-3.22
@@ -36,10 +37,13 @@ jobs:
           - debian-12
           - debian-13
           - debian-sid
+          - fedora-42
           - fedora-43
           - rockylinux-9
+          - rockylinux-10
           - ubuntu-22.04
           - ubuntu-24.04
+          - ubuntu-26.04
     steps:
       - uses: actions/checkout@v6
       - name: Setup environment
