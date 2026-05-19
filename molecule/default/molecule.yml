@@ -13,8 +13,8 @@ platforms:
 provisioner:
   name: ansible
   env:
-    ANSIBLE_DISPLAY_OK_HOSTS: "false"
     ANSIBLE_DISPLAY_SKIPPED_HOSTS: false
+    ANSIBLE_EXECUTABLE: /bin/bash
     ANSIBLE_FORCE_COLOR: true
     ANSIBLE_GATHERING: explicit
     ANSIBLE_ROLES_PATH: ../../..

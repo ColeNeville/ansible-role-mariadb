@@ -22,12 +22,16 @@
   tasks:
     - name: Check that test db exist (created only on primary node)
       ansible.builtin.shell: |
+        set -o errexit
+        set -o pipefail
         mariadb -Bse 'SHOW DATABASES' | grep -q '^{{ item }}$'
       loop:
         - db
 
     - name: Get replica status
       ansible.builtin.shell: |
+        set -o errexit
+        set -o pipefail
         mariadb -Bse 'SHOW SLAVE STATUS\G'
       register: replica_status
 

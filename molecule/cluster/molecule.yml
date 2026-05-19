@@ -56,8 +56,8 @@ provisioner:
       node3:
         mariadb_server_id: 3
   env:
-    ANSIBLE_DISPLAY_OK_HOSTS: "false"
     ANSIBLE_DISPLAY_SKIPPED_HOSTS: false
+    ANSIBLE_EXECUTABLE: /bin/bash
     ANSIBLE_FORCE_COLOR: true
     ANSIBLE_GATHERING: explicit
     ANSIBLE_ROLES_PATH: ../../..
