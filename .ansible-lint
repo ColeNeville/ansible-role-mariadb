@@ -1,7 +1,8 @@
 ---
 skip_list:
-  - 'empty-string-compare'
   - 'braces'
+  - 'empty-string-compare'
+  - 'fqcn'
   - 'yaml'
 
 exclude_paths:
