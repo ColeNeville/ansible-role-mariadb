@@ -3,6 +3,9 @@
   hosts: all
   gather_facts: true
   vars:
+    # the following is needed because move to /var/lib/mariadb was done only on
+    # official Debian/Ubuntu packaging, not on MariDB Foundation ones
+    mariadb_data_dir: "/var/lib/mysql"
     mariadb_use_official_repo: true
     mariadb_use_official_repo_version: "{{ lookup('env', 'MARIADB_VERSION') }}"
 

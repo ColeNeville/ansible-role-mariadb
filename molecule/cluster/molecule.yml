@@ -4,6 +4,8 @@ driver:
 platforms:
   - name: node1
     image: "ghcr.io/fauust/docker-ansible:${MOLECULE_DISTRO:-debian-11}"
+    capabilities:
+      - SYS_ADMIN
     volumes:
       - /sys/fs/cgroup:/sys/fs/cgroup:ro
     override_command: false
@@ -11,6 +13,8 @@ platforms:
     network: local
   - name: node2
     image: "ghcr.io/fauust/docker-ansible:${MOLECULE_DISTRO:-debian-11}"
+    capabilities:
+      - SYS_ADMIN
     volumes:
       - /sys/fs/cgroup:/sys/fs/cgroup:ro
     override_command: false
@@ -20,6 +24,8 @@ platforms:
     network: local
   - name: node3
     image: "ghcr.io/fauust/docker-ansible:${MOLECULE_DISTRO:-debian-11}"
+    capabilities:
+      - SYS_ADMIN
     volumes:
       - /sys/fs/cgroup:/sys/fs/cgroup:ro
     override_command: false

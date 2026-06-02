@@ -3,6 +3,8 @@
   hosts: all
   gather_facts: true
   vars_files: vars/testvars.yml
+  vars:
+    mariadb_data_dir: "{{ lookup('env', 'MARIADB_DATADIR') | default('/var/lib/mysql', true) }}"
 
   roles:
     - role: ansible-role-mariadb
